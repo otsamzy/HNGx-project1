@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+
+
+}
+
+body {
+    background-color: var(--background_color);
+}
+
+:root {
+    --background_color: rgb(253, 216, 129);
+    --pure_red: red;
+    --text_gold: rgb(193, 122, 0);
+    --redColor: #C63D2F;
+    --gold_text_color: #FFBB5C;
+    --gold_text2: rgb(227, 144, 0);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+.main_container {
+    min-height: 100vh;
+
+    padding-top: 10rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+}
+
+.header {
+    text-align: center;
+}
+
+.section_title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--redColor);
+    text-align: center;
+    letter-spacing: 2px;
+    position: relative;
+    width: fit-content;
+    margin: auto;
+
+}
+
+.section_title::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: var(--redColor);
+    bottom: -10px;
+    right: 24%
+}
+
+.profile_wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+    gap: 4rem;
+
+
+}
+
+.profile_image {
+    width: 300px;
+
+    position: relative;
+    z-index: 1;
+    margin-right: 4rem;
+
+}
+
+.profile_image::after {
+    border: 6px solid var(--redColor);
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    right: 25px;
+    top: 20px;
+    border-radius: 20px;
+    z-index: -1;
+
+}
+
+.profile_image img {
+    width: 100%;
+    height: 100%;
+    border: solid 8px var(--background_color);
+    border-radius: 20px
+}
+
+.profile_right_components {
+    text-align: center;
+}
+
+.profile_name {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--redColor);
+    text-align: center;
+}
+
+.role {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text_gold);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+}
+
+.time_wrapper {
+    width: 400px;
+
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .6);
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+    padding-bottom: 1rem;
+    border-radius: 10px;
+}
+
+.time_milli {
+    padding: 1rem 3rem;
+    font-size: 3rem;
+    font-weight: 500;
+    background-color: var(--background_color);
+    width: fit-content;
+    box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.6);
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    color: var(--gold_text2);
+    text-transform: uppercase;
+    width: 300px;
+}
+
+.day {
+    padding: 1rem 3rem;
+    font-size: 3rem;
+    font-weight: 500;
+    background-color: var(--background_color);
+    width: fit-content;
+    box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.6);
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    color: var(--gold_text2);
+    text-transform: uppercase;
+}
+
+button {
+    padding: 2rem;
+    border-radius: 10px;
+    width: 400px;
+    background-color: transparent;
+    border: 2px solid var(--redColor);
+    transition: all .25s ease;
+}
+
+button a {
+    font-size: 3rem;
+    font-weight: 600;
+    white-space: nowrap;
+    color: var(--redColor);
+    cursor: pointer;
+    transition: all .25s ease;
+
+}
+
+button:hover {
+    background-color: var(--redColor);
+
+}
+
+button:hover a {
+    color: var(--background_color);
+    background-color: transparent;
+}
+
+@media (max-width:900px) {
+    .profile_wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .time_wrapper {}
+
+    .profile_right_components {
+        margin-top: 4rem;
+    }
+
+
+}
+
+@media (max-width:420px) {
+    .profile_image {
+        width: 200px;
+    }
+
+    .section_title {
+        font-size: 2.5rem;
+    }
+
+    .profile_name {
+        font-size: 2rem;
+    }
+
+    .role {
+        font-size: 2rem;
+    }
+
+    .time_wrapper {
+        width: 300px;
+        margin: 2rem auto;
+
+    }
+
+    .time_milli,
+    .day {
+        font-size: 2rem;
+    }
+
+    .time_milli {
+        width: 80%;
+    }
+
+    button {
+        width: 300px;
+    }
+
+    button a {
+        font-size: 2rem;
+    }
+}
